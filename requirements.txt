@@ -1,0 +1,15 @@
+beautifulsoup4
+requests
+sentence-transformers
+bertopic
+scikit-learn
+pandas
+numpy
+umap-learn
+hdbscan
+matplotlib
+seaborn
+langdetect
+wordcloud
+plotly
+nltk
