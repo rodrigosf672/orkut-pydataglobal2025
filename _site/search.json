@@ -1,0 +1,569 @@
+[
+  {
+    "objectID": "orkut-presentation.html#introduction",
+    "href": "orkut-presentation.html#introduction",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Introduction",
+    "text": "Introduction\n\nOrkut shaped early Brazilian internet culture.\n\nCommunity names were a public form of self-curation.\n\nAfter 2014, almost all platform data disappeared.\n\nOnly partial HTML snapshots survive.\n\n\nSet up the problem: cultural loss + fragmented archives + why reconstruction is valuable."
+  },
+  {
+    "objectID": "orkut-presentation.html#why-orkut-matters",
+    "href": "orkut-presentation.html#why-orkut-matters",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Why Orkut Matters",
+    "text": "Why Orkut Matters\n\nCommunities worked as a vocabulary of identity.\n\nNo algorithmic feeds: users curated themselves.\n\nNames acted as expressive micro-texts.\n\n\nExplain how community titles functioned like early status updates, humor, belonging cues."
+  },
+  {
+    "objectID": "orkut-presentation.html#global-shifts-20042014",
+    "href": "orkut-presentation.html#global-shifts-20042014",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Global Shifts (2004–2014)",
+    "text": "Global Shifts (2004–2014)\n\n\n\nCountry\n2004\n2014\n\n\n\n\nBrazil\n5.16%\n55.5%\n\n\nUS\n51.36%\n3.3%\n\n\nIndia\n—\n18.4%\n\n\nChina\n—\n6.4%\n\n\nJapan\n7.74%\n2.7%"
+  },
+  {
+    "objectID": "orkut-presentation.html#timeline-of-the-platform",
+    "href": "orkut-presentation.html#timeline-of-the-platform",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Timeline of the Platform",
+    "text": "Timeline of the Platform\n\n2004: Launch\n\n2005: Rapid Brazilian adoption\n\n2007: Dominant in Brazil and India\n\n2010: Infrastructure migration; slowdown in development\n\n2012: Platform neglect becomes visible\n\n2014: Shutdown; archive survives only in partial snapshots"
+  },
+  {
+    "objectID": "orkut-presentation.html#platform-decline-and-digital-amnesia",
+    "href": "orkut-presentation.html#platform-decline-and-digital-amnesia",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Platform Decline and Digital Amnesia",
+    "text": "Platform Decline and Digital Amnesia\n\nOver 51 million communities existed; only a fraction survive.\n\nThe shutdown erased cultural material central to Brazil’s digital history.\n\nThis project treats the surviving fragments as a vernacular archive."
+  },
+  {
+    "objectID": "orkut-presentation.html#what-survives",
+    "href": "orkut-presentation.html#what-survives",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "What Survives",
+    "text": "What Survives\n\n124,988 recoverable community names.\n\nVariation across language, style, humor, identity cues.\n\nEach title = a micro-text of early social networking.\n\n\n\n\n\n\n\nImportant\n\n\nClusters represent linguistic similarity; not user groups.\n\n\n\n\nClarify what the dataset actually is and isn’t.\nPrevent misinterpretation: this is linguistic, not social network analysis."
+  },
+  {
+    "objectID": "orkut-presentation.html#reconstructing-the-archive",
+    "href": "orkut-presentation.html#reconstructing-the-archive",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Reconstructing the Archive",
+    "text": "Reconstructing the Archive\nChallenges\n\nNo API; only HTML remnants\n\nSnapshots inconsistent in markup, layout, and completeness\n\nPages partially saved or corrupted\n\nStructure varies across years\n\nApproach\n\nA defensive, multi-layered scraping strategy\n\nMultiple selector fallbacks\n\nDeduplication and noise filtering\n\nOutput stored as CSV for transparency and reproducibility"
+  },
+  {
+    "objectID": "orkut-presentation.html#why-csv",
+    "href": "orkut-presentation.html#why-csv",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Why CSV",
+    "text": "Why CSV\n\nPortable\n\nTransparent\n\nReproducible\n\nWorks across Python/R/Julia\n\nAvoids re-scraping"
+  },
+  {
+    "objectID": "orkut-presentation.html#linguistic-foundations",
+    "href": "orkut-presentation.html#linguistic-foundations",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Linguistic Foundations",
+    "text": "Linguistic Foundations\n\nCommunity names encode stance, identity, humor, belonging.\n\nThey form a unique record of early internet culture.\n\nAnalysis combines stylometry and semantics.\n\n\nExplain why stylometry + semantics complement each other."
+  },
+  {
+    "objectID": "orkut-presentation.html#feature-engineering",
+    "href": "orkut-presentation.html#feature-engineering",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Feature Engineering",
+    "text": "Feature Engineering\nStylometric Features\n\nCharacter length\n\nCapitalization ratio\n\nVowel elongation\n\nPunctuation elongation\n\nSymbol density\n\nMiguxês-like features (k_style)\n\nSemantic Features\n\nMultilingual embeddings using SentenceTransformers\n\nUMAP for dimensionality reduction\n\nMacro and micro clustering (KMeans, HDBSCAN, BERTopic)"
+  },
+  {
+    "objectID": "orkut-presentation.html#language-distribution",
+    "href": "orkut-presentation.html#language-distribution",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Language Distribution",
+    "text": "Language Distribution\n\nstatic preview — interactive version shown in the Quarto report\n\nMention mix of Portuguese, English, Spanish, and smaller languages."
+  },
+  {
+    "objectID": "orkut-presentation.html#semantic-map-umap",
+    "href": "orkut-presentation.html#semantic-map-umap",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Semantic Map (UMAP)",
+    "text": "Semantic Map (UMAP)\n\nstatic preview — interactive exploration in the Quarto report\n\nAxes aren’t interpretable; emphasis is local neighborhoods."
+  },
+  {
+    "objectID": "orkut-presentation.html#stylometric-topography-caps-lock",
+    "href": "orkut-presentation.html#stylometric-topography-caps-lock",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Stylometric Topography: Caps Lock",
+    "text": "Stylometric Topography: Caps Lock\n\nCaps lock stylometry\nCaps ratio works as a proxy for stylistic intensity\n\nClusters show expressive micro-genres"
+  },
+  {
+    "objectID": "orkut-presentation.html#stylometric-topography-miguxês",
+    "href": "orkut-presentation.html#stylometric-topography-miguxês",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Stylometric Topography: Miguxês",
+    "text": "Stylometric Topography: Miguxês\n\nMiguxês stylometry\nMiguxês was central in Brazilian youth online culture\n\nk_style approximates one dimension of the register\n\n\n\n\n\n\n\nNote\n\n\nk_style is a coarse heuristic. Treat it as broad stylistic structure, not a classifier."
+  },
+  {
+    "objectID": "orkut-presentation.html#topic-modeling-with-bertopic",
+    "href": "orkut-presentation.html#topic-modeling-with-bertopic",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Topic Modeling with BERTopic",
+    "text": "Topic Modeling with BERTopic\n\nIdeal for short, multilingual text\n\nEmbedding-based\n\nHDBSCAN does not require choosing k\n\nProduces interpretable micro-topics\n\n\nEmphasize why BERTopic fits: short, noisy, multilingual titles."
+  },
+  {
+    "objectID": "orkut-presentation.html#intertopic-structure",
+    "href": "orkut-presentation.html#intertopic-structure",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Intertopic Structure",
+    "text": "Intertopic Structure\n\nBERTopic intertopic map"
+  },
+  {
+    "objectID": "orkut-presentation.html#sentiment-mapping",
+    "href": "orkut-presentation.html#sentiment-mapping",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Sentiment Mapping",
+    "text": "Sentiment Mapping\n\nstatic preview — interactive version in the Quarto report\n\nExplain VADER limitations for Portuguese."
+  },
+  {
+    "objectID": "orkut-presentation.html#conclusion-the-vernacular-archive",
+    "href": "orkut-presentation.html#conclusion-the-vernacular-archive",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Conclusion: The Vernacular Archive",
+    "text": "Conclusion: The Vernacular Archive\n\nOrkut preserves a unique moment in web history.\n\nCommunity names formed a lightweight identity system.\n\nExpressive registers include affect, humor, fandom, locality, youth styles."
+  },
+  {
+    "objectID": "orkut-presentation.html#why-this-matters",
+    "href": "orkut-presentation.html#why-this-matters",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Why This Matters",
+    "text": "Why This Matters\n\nPlatforms vanish; cultural memory disappears.\n\nSurviving fragments still hold sociological value.\n\nOrkut shows intentional, user-driven identity: no algorithmic mediation.\n\n\nConnect to broader debates on digital memory and platform governance."
+  },
+  {
+    "objectID": "orkut-presentation.html#future-directions",
+    "href": "orkut-presentation.html#future-directions",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Future Directions",
+    "text": "Future Directions\n\nRicher sociolinguistic modeling\n\nGeographic identity signals\n\nRegister mapping across semantic space\n\nArchival forum thread analysis\n\nMulti-feature alignment (semantics × style × sentiment)\n\n\nEncourage collaboration; mention potential for community-based archival projects."
+  },
+  {
+    "objectID": "orkut_analysis.html",
+    "href": "orkut_analysis.html",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Example of an Orkut profile showing community affiliations (© Google/Orkut)\n\n\n\n\nOrkut occupied a singular position in the cultural and emotional landscape of Brazil’s early internet. Between 2004 and 2014, its communities functioned as a semiotic infrastructure for online self-presentation. These user-created labels — “I love coffee,” “I hate waking up early,” or “Emo ♥” — operated as micro-utterances of identity, giving users a concise vocabulary for signaling taste, humor, relationality, and subcultural belonging.\nUnlike contemporary platforms organized around algorithmic feeds, Orkut centered on static self-curation. The communities displayed on a profile formed a public, durable archive of identity performance.\n\n\n\n\n\n\nKey Insight\n\n\n\nOn Orkut, you chose what represented you. Nothing was inferred or ranked by an algorithm.\nThis makes Orkut an unusually rich lens on intentional self-presentation.\n\n\n\n\n\n\nOrkut’s geographic center shifted dramatically over its lifespan. Originally dominated by US traffic, it became overwhelmingly Brazilian, with India emerging as a major secondary hub.\n\n\n\n\n\n\n\n\nCountry\nTraffic on Mar 31, 2004\nTraffic on Sep 30, 2014\n\n\n\n\nBrazil\n5.16%\n55.5%\n\n\nUnited States\n51.36%\n3.3%\n\n\nIndia\n—\n18.4%\n\n\nChina\n—\n6.4%\n\n\nJapan\n7.74%\n2.7%\n\n\nNetherlands\n4.10%\n—\n\n\nUnited Kingdom\n3.72%\n—\n\n\nOther\n27.92%\n15.7%\n\n\n\nSource: Wayback Machine capture of Alexa data · https://web.archive.org/web/20140109153358/http://www.alexa.com/siteinfo/orkut.com.br\n\n\n\n\n\n\nGeographic Shifts\n\n\n\nOrkut’s user base shifted from US-centric in 2004 to predominantly Brazilian by 2014, with India as a significant secondary market. These shifts matter because linguistic, cultural, and stylistic norms on Orkut were shaped by its user base (especially Brazil and India) leading to a platform with its own vernacular logic.\n\n\n\n\n\n\n\n\n\n\n\n\nOrkut Timeline (2004–2014)\n\n\n\n\n2004: Orkut launches; US-centric user base\n\n2005: Rapid adoption in Brazil; Portuguese becomes dominant\n\n2007: Orkut becomes #1 in Brazil and India\n\n2010: Infrastructure migration; visible slowdown in innovation\n\n2012: Platform neglect; reduced moderation and updates\n\n2014: Orkut shuts down; only Wayback remnants survive\n\n\n\n\n\n\n\n\nWhen Google shut the platform down, the social world it contained was almost entirely erased. According to Orkut’s final public metrics:\n\n51 million communities\n\n120 million discussion topics\n\nOver one billion user interactions\n\nNearly all of this vanished.\nThe loss was the downstream effect of a long process of enshittification understood not as monetization but neglect. In Cory Doctorow’s PyCon US keynote, he argues that platforms deteriorate when incentives to maintain user-centered infrastructure collapse. This framing strongly informed the conceptual orientation of this project.\nOrkut’s shutdown was the end point of that trajectory — a once-vibrant cultural space allowed to decay before ultimate removal.\n\n\n\n\nWhat remains of Orkut exists only in fragmentary form, preserved across inconsistent, partial snapshots in the Wayback Machine. These remnants constitute a sparse but invaluable archive of vernacular digital culture, capturing expressive practices central to everyday sociability in Brazil, India, and much of the early-2000s Global South internet.\nThis project retrieves and interprets a subset of those traces: 124,988 surviving community names. Using Python-based computational methods, the analysis treats these names as sociolinguistic artifacts — small inscriptions of identity, humor, desire, complaint, fandom, and cultural belonging.\n\n\n\n\n\n\nInterpretive caution\n\n\n\nClusters and patterns in this study reflect linguistic similarity among community names, not the behavior or beliefs of actual users.\n\n\nBy analyzing these traces, the project maps the expressive and semiotic textures of one of the most influential platforms in the history of Brazilian digital culture."
+  },
+  {
+    "objectID": "orkut_analysis.html#orkut-as-cultural-infrastructure",
+    "href": "orkut_analysis.html#orkut-as-cultural-infrastructure",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Orkut occupied a singular position in the cultural and emotional landscape of Brazil’s early internet. Between 2004 and 2014, its communities functioned as a semiotic infrastructure for online self-presentation. These user-created labels — “I love coffee,” “I hate waking up early,” or “Emo ♥” — operated as micro-utterances of identity, giving users a concise vocabulary for signaling taste, humor, relationality, and subcultural belonging.\nUnlike contemporary platforms organized around algorithmic feeds, Orkut centered on static self-curation. The communities displayed on a profile formed a public, durable archive of identity performance.\n\n\n\n\n\n\nKey Insight\n\n\n\nOn Orkut, you chose what represented you. Nothing was inferred or ranked by an algorithm.\nThis makes Orkut an unusually rich lens on intentional self-presentation."
+  },
+  {
+    "objectID": "orkut_analysis.html#a-global-platform-in-motion-20042014",
+    "href": "orkut_analysis.html#a-global-platform-in-motion-20042014",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Orkut’s geographic center shifted dramatically over its lifespan. Originally dominated by US traffic, it became overwhelmingly Brazilian, with India emerging as a major secondary hub.\n\n\n\n\n\n\n\n\nCountry\nTraffic on Mar 31, 2004\nTraffic on Sep 30, 2014\n\n\n\n\nBrazil\n5.16%\n55.5%\n\n\nUnited States\n51.36%\n3.3%\n\n\nIndia\n—\n18.4%\n\n\nChina\n—\n6.4%\n\n\nJapan\n7.74%\n2.7%\n\n\nNetherlands\n4.10%\n—\n\n\nUnited Kingdom\n3.72%\n—\n\n\nOther\n27.92%\n15.7%\n\n\n\nSource: Wayback Machine capture of Alexa data · https://web.archive.org/web/20140109153358/http://www.alexa.com/siteinfo/orkut.com.br\n\n\n\n\n\n\nGeographic Shifts\n\n\n\nOrkut’s user base shifted from US-centric in 2004 to predominantly Brazilian by 2014, with India as a significant secondary market. These shifts matter because linguistic, cultural, and stylistic norms on Orkut were shaped by its user base (especially Brazil and India) leading to a platform with its own vernacular logic."
+  },
+  {
+    "objectID": "orkut_analysis.html#a-brief-timeline-of-orkut",
+    "href": "orkut_analysis.html#a-brief-timeline-of-orkut",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Orkut Timeline (2004–2014)\n\n\n\n\n2004: Orkut launches; US-centric user base\n\n2005: Rapid adoption in Brazil; Portuguese becomes dominant\n\n2007: Orkut becomes #1 in Brazil and India\n\n2010: Infrastructure migration; visible slowdown in innovation\n\n2012: Platform neglect; reduced moderation and updates\n\n2014: Orkut shuts down; only Wayback remnants survive"
+  },
+  {
+    "objectID": "orkut_analysis.html#platform-decline-and-digital-amnesia",
+    "href": "orkut_analysis.html#platform-decline-and-digital-amnesia",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "When Google shut the platform down, the social world it contained was almost entirely erased. According to Orkut’s final public metrics:\n\n51 million communities\n\n120 million discussion topics\n\nOver one billion user interactions\n\nNearly all of this vanished.\nThe loss was the downstream effect of a long process of enshittification understood not as monetization but neglect. In Cory Doctorow’s PyCon US keynote, he argues that platforms deteriorate when incentives to maintain user-centered infrastructure collapse. This framing strongly informed the conceptual orientation of this project.\nOrkut’s shutdown was the end point of that trajectory — a once-vibrant cultural space allowed to decay before ultimate removal."
+  },
+  {
+    "objectID": "orkut_analysis.html#what-survives-and-why-it-matters",
+    "href": "orkut_analysis.html#what-survives-and-why-it-matters",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "What remains of Orkut exists only in fragmentary form, preserved across inconsistent, partial snapshots in the Wayback Machine. These remnants constitute a sparse but invaluable archive of vernacular digital culture, capturing expressive practices central to everyday sociability in Brazil, India, and much of the early-2000s Global South internet.\nThis project retrieves and interprets a subset of those traces: 124,988 surviving community names. Using Python-based computational methods, the analysis treats these names as sociolinguistic artifacts — small inscriptions of identity, humor, desire, complaint, fandom, and cultural belonging.\n\n\n\n\n\n\nInterpretive caution\n\n\n\nClusters and patterns in this study reflect linguistic similarity among community names, not the behavior or beliefs of actual users.\n\n\nBy analyzing these traces, the project maps the expressive and semiotic textures of one of the most influential platforms in the history of Brazilian digital culture."
+  },
+  {
+    "objectID": "orkut_analysis.html#caps-lock-intensity",
+    "href": "orkut_analysis.html#caps-lock-intensity",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "7.1 Caps Lock Intensity",
+    "text": "7.1 Caps Lock Intensity\nFor the caps lock intensity map, each point is colored by the proportion of uppercase characters in the community name (caps_ratio). This feature acts as a loose proxy for visual intensity or emphasis.\nThe global pattern looks diffuse, but small pockets of darker points can appear on closer inspection. These pockets represent localized concentrations of high caps ratios rather than an even spread. When they occur, they often align with semantic regions where community names express strong affect, playful antagonism, or exaggerated humor.\n\n\n\n\n\n\nInterpretive caution on caps_ratio\n\n\n\nCaps usage is not a reliable emotional signal on its own. It should be understood as one stylistic feature that may cluster weakly with certain genres, not as evidence of genuine sentiment.\n\n\nBecause the analysis works only with community titles, the map cannot show why users chose these orthographic styles. What it can show is that capitalization is not entirely random. It tends to appear in specific stylistic neighborhoods, suggesting mild but detectable structure in how Orkut users used visual emphasis.\n\n\nCode\nfig = px.scatter(\n    df, x=\"x\", y=\"y\", color=\"caps_ratio\",\n    title=\"Caps Lock Intensity Map\",\n    color_continuous_scale=\"Reds\",\n    opacity=0.5\n)\nfig.show()"
+  },
+  {
+    "objectID": "orkut_analysis.html#miguxês-distribution",
+    "href": "orkut_analysis.html#miguxês-distribution",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "7.2 Miguxês Distribution",
+    "text": "7.2 Miguxês Distribution\nMiguxês is a playful, youth-oriented online writing style that became widespread in Brazil during the early 2000s and was especially visible on Orkut. It uses deliberate spelling changes, including the replacement of qu with k, to signal informality, intimacy, and membership in specific online peer cultures.\nThe miguxês map colors each point using a binary indicator (k_style) that marks names where the letter k appears in positions where standard Portuguese uses qu, as in kerer or kasa. Clear English words such as rock or link were filtered out so that the feature would more reliably capture Portuguese stylistic play. This indicator captures only one dimension of miguxês and should be understood as a narrow and approximate proxy.\n\n\n\n\n\n\nMethodological note on k_style\n\n\n\nThe k_style feature is a narrow heuristic meant to approximate one aspect of miguxês. It carries a high risk of false positives because many languages and proper nouns use the letter “k” naturally. It should therefore be treated only as a coarse stylistic proxy, not a reliable classifier of miguxês.\n\n\nEven with this limited feature, the map shows localized clusters of stylistically marked names rather than a uniform distribution. These clusters often fall in semantic neighborhoods associated with youth-oriented or playful communities, which aligns with sociolinguistic descriptions of miguxês as a register tied to online peer groups.\nThe overall pattern suggests that orthographic style participated in the same latent structure as topic, sentiment, and language. Spelling choices were one of the ways Orkut users signaled identity and social alignment in public.\n\n\nCode\nfig2 = px.scatter(\n    df, x=\"x\", y=\"y\", color=\"k_style\",\n    title=\"Miguxês Distribution Map\",\n    color_continuous_scale=[\"lightgray\",\"crimson\"],\n    opacity=0.5\n)\nfig2.show()"
+  },
+  {
+    "objectID": "orkut_analysis.html#bertopic-visualizations",
+    "href": "orkut_analysis.html#bertopic-visualizations",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "8.1 BERTopic Visualizations",
+    "text": "8.1 BERTopic Visualizations\nThe BERTopic model identifies recurring patterns in how Orkut users named their communities. These topics are not communities of people but clusters of titles that share similar lexical and semantic properties. They help reveal the cultural motifs, expressive habits, and identity markers that shaped the platform’s public vocabulary. The following subsections introduce the main diagnostic plots used to interpret these patterns and discuss what they suggest about the structure of Orkut’s naming conventions.\n\n8.1.1 Topic Barcharts (Top 20)\nThe charts below display the highest-scoring words for the twenty most prominent BERTopic micro-communities. Each topic represents a dense lexical neighborhood in embedding space. These are not “real” communities in the sociological sense but statistical clusters formed from surface cues in community names. Their value lies in revealing the recurring motifs through which Orkut users signaled identity, affinity, and humor.\n\n\nCode\nfig_barchart = topic_model.visualize_barchart(top_n_topics=20)\nfig_barchart.show()\n\n\n                            \n                                            \n\n\nIn aggregate, these twenty topics illustrate the semantic texture of Orkut’s community names. They suggest that self-presentation was shaped by nationality, affect, fandom, kinship, humor, and everyday evaluations. Because the analysis operates only on community titles, these clusters should be read as patterns of linguistic association rather than strict categories of online social life.\n\n\n8.1.2 Intertopic Distance Map\nThe intertopic distance map projects all micro-topics into a two-dimensional embedding space. Each circle represents a topic, and circle size corresponds to its relative frequency. Topics that appear close together share similar semantic environments. Topics that appear far apart occupy distinct regions of the expressive landscape. The map shows that the naming practices on Orkut formed several clusters of related meanings rather than a single homogeneous field. It also reflects the high granularity of the model, since hundreds of micro-topics coexist within a relatively dense space.\n\n\nCode\nfig_topics = topic_model.visualize_topics()\nfig_topics.show()\n\n\n                            \n                                            \n\n\n\n\n8.1.3 Hierarchical Clustering\nThe dendrogram arranges topics into a hierarchical structure based on similarity. Although visually extensive, it provides a valuable multi-scale view of the landscape. Small micro-topics join into medium clusters, and medium clusters join into larger families. This structure shows that users relied on a repertoire of related naming styles that blend into one another at higher levels of abstraction. The dendrogram should not be interpreted as a taxonomy of social categories. Instead it helps reveal how diverse micro-styles combine to form broader semantic regions.\n\n\nCode\nfig_hier = topic_model.visualize_hierarchy()\nfig_hier.show()\n\n\n                            \n                                            \n\n\n\n\n8.1.4 Term Score Decline by Topic\nThe term-score decline plot shows how sharply c-TF-IDF values fall within each topic. For most topics, the top-ranked word is far more distinctive than the words that follow. This pattern indicates that many topics have a narrow lexical core that strongly defines them. A minority of topics display flatter curves, suggesting more heterogeneous naming patterns. The overall impression is that Orkut community names often relied on formulaic and highly concentrated lexical signals. Users did not draw from an unlimited vocabulary but instead repeated familiar patterns that the model can easily detect.\n\n\nCode\nfig_rank = topic_model.visualize_term_rank([0])\nfig_rank.show()\n\n\n                            \n                                            \n\n\n\n\n8.1.5 Similarity Matrix\nThe similarity matrix compares the twenty largest topics and displays cosine similarity among their embeddings. Darker squares correspond to higher similarity. Clusters associated with affection vocabulary appear near each other. Clusters that emphasize national identity or family categories also align closely. In contrast, topics tied to early internet slang, rock music, fan scenes, or personal names occupy more distant positions. This matrix supports the interpretation that Orkut naming practices were structured by a small number of expressive families rather than a random assortment of unrelated phrases.\n\n\nCode\nfig_heat = topic_model.visualize_heatmap(top_n_topics=20)\nfig_heat.show()"
+  },
+  {
+    "objectID": "orkut_analysis.html#pattern-based-topic-summaries",
+    "href": "orkut_analysis.html#pattern-based-topic-summaries",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "8.2 Pattern-Based Topic Summaries",
+    "text": "8.2 Pattern-Based Topic Summaries\nHerein, we develop a summarize_topic function based on abstracted linguistic patterns rather than raw community names. The summaries draw on the cluster’s top keywords to generate representative expressions, such as positive and negative stance formulas, fandom markers, or nationality labels.\nThe goal is to give an interpretable sense of what each topic captures without exposing individual community titles (which can be inappropriate). This pattern-based approach supports a sociological reading of the clusters by foregrounding recurrent forms of stance, affiliation, and identity work, while minimizing the noise and volatility of the original community names.\n\n\nCode\ndef summarize_topic(topic_id, n_patterns=5):\n    \"\"\"\n    Summarize a BERTopic micro-cluster using:\n    - Top keywords\n    - Interpretable synthetic linguistic patterns\n    - Cluster size\n    Without printing any real community names.\n    \"\"\"\n    print(\"=\"*90)\n    print(f\"TOPIC {topic_id}\")\n\n    topic_words = topic_model.get_topic(topic_id)\n\n    if not topic_words:\n        print(\"(No keywords, likely outlier cluster)\")\n        return\n\n    # -----------------------------\n    # 1. Show top lexical signals\n    # -----------------------------\n    print(\"\\nTop Keywords:\")\n    for w, weight in topic_words[:10]:\n        print(f\"  • {w} ({weight:.3f})\")\n\n    # -----------------------------\n    # 2. Show cluster size\n    # -----------------------------\n    size = (df[\"topic_micro\"] == topic_id).sum()\n    print(f\"\\nCluster size: {size}\")\n\n    # -----------------------------\n    # 3. Generate synthetic examples\n    # -----------------------------\n    print(\"\\nRepresentative Linguistic Patterns:\")\n\n    # extract top words only\n    top_words = [w for w, _ in topic_words[:15]]\n\n    # templates for positive affect\n    positive_templates = [\n        \"eu amo {w}\",\n        \"eu adoro {w}\",\n        \"eu gosto de {w}\"\n    ]\n\n    # templates for negative affect\n    negative_templates = [\n        \"eu odeio {w}\",\n        \"eu nao suporto {w}\",\n        \"eu nao gosto de {w}\"\n    ]\n\n    # templates for identity / belonging\n    identity_templates = [\n        \"sou fã de {w}\",\n        \"grupo dos que gostam de {w}\",\n        \"pessoas que apreciam {w}\"\n    ]\n\n    # templates for fandom / pop culture\n    fandom_templates = [\n        \"fãs de {w}\",\n        \"eu assisto {w}\",\n        \"eu admiro {w}\"\n    ]\n\n    # templates for general noun clusters\n    generic_templates = [\n        \"coisas relacionadas a {w}\",\n        \"pessoas interessadas em {w}\",\n        \"comunidade sobre {w}\"\n    ]\n\n    # heuristics based on keywords  \n    patterns = []\n\n    if any(w in [\"amo\", \"gosto\", \"amor\", \"adoro\"] for w in top_words):\n        for t in positive_templates:\n            w = top_words[0]\n            patterns.append(t.format(w=w))\n\n    if any(w in [\"odeio\", \"raiva\", \"insuportável\"] for w in top_words):\n        for t in negative_templates:\n            w = top_words[0]\n            patterns.append(t.format(w=w))\n\n    if any(w in [\"brasil\", \"india\", \"familia\", \"universidade\"] for w in top_words):\n        for t in identity_templates:\n            w = top_words[0]\n            patterns.append(t.format(w=w))\n\n    if any(w in [\"rock\", \"anime\", \"msn\", \"musica\"] for w in top_words):\n        for t in fandom_templates:\n            w = top_words[0]\n            patterns.append(t.format(w=w))\n\n    # fallback if nothing matches\n    if not patterns:\n        for t in generic_templates:\n            w = top_words[0]\n            patterns.append(t.format(w=w))\n\n    # print only n_patterns\n    for p in patterns[:n_patterns]:\n        print(f\"  → {p}\")"
+  },
+  {
+    "objectID": "orkut-presentation.html#section",
+    "href": "orkut-presentation.html#section",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Note\n\n\nOrkut shifted from US-centric → Brazil + India + Global South\n\n\n\n\nReinforce the shift and why it matters for multilingual modeling."
+  },
+  {
+    "objectID": "orkut-presentation.html#section-1",
+    "href": "orkut-presentation.html#section-1",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Note\n\n\nOrkut shifted from US-centric → Brazilian → Brazil + India."
+  },
+  {
+    "objectID": "orkut-presentation.html#section-2",
+    "href": "orkut-presentation.html#section-2",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Note\n\n\nOrkut shifted from US-centric → Brazilian → Brazil+India."
+  },
+  {
+    "objectID": "orkut-presentation.html#timeline",
+    "href": "orkut-presentation.html#timeline",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Timeline",
+    "text": "Timeline\n\n2004: Launch\n\n2005: Mass adoption in Brazil\n\n2007: India joins as a major hub\n\n2010: Infrastructure migration\n\n2012: Feature decay begins\n\n2014: Shutdown"
+  },
+  {
+    "objectID": "orkut-presentation.html#platform-decline",
+    "href": "orkut-presentation.html#platform-decline",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Platform Decline",
+    "text": "Platform Decline\n\n51M+ communities lost.\n\nAlmost all cultural material erased.\n\nRemaining content = inconsistent web snapshots.\n\n\nEmphasize digital amnesia and importance of recovery."
+  },
+  {
+    "objectID": "orkut-presentation.html#challenges-in-reconstruction",
+    "href": "orkut-presentation.html#challenges-in-reconstruction",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Challenges in Reconstruction",
+    "text": "Challenges in Reconstruction\n\nNo API\n\nBroken or partial HTML\n\nVarying markup across years\n\nMissing navigation links\n\nRedundant / duplicate content"
+  },
+  {
+    "objectID": "orkut-presentation.html#reconstruction-approach",
+    "href": "orkut-presentation.html#reconstruction-approach",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Reconstruction Approach",
+    "text": "Reconstruction Approach\n\nMultiple CSS fallbacks\n\nDefensive parsing\n\nDeduplication\n\nNoise filtering\n\nStored as CSV for reproducibility\n\n\nReassure reproducibility.\nHighlight careful engineering despite messy source data."
+  },
+  {
+    "objectID": "orkut-presentation.html#feature-engineering-stylometry",
+    "href": "orkut-presentation.html#feature-engineering-stylometry",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Feature Engineering: Stylometry",
+    "text": "Feature Engineering: Stylometry\n\nCharacter length\n\nCaps ratio\n\nVowel elongation\n\nPunctuation elongation\n\nSymbol density\n\nMiguxês (k_style) patterns"
+  },
+  {
+    "objectID": "orkut-presentation.html#feature-engineering-semantics",
+    "href": "orkut-presentation.html#feature-engineering-semantics",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Feature Engineering: Semantics",
+    "text": "Feature Engineering: Semantics\n\nSentenceTransformers embeddings\n\nUMAP for projection\n\nKMeans / HDBSCAN / BERTopic for clustering"
+  },
+  {
+    "objectID": "orkut-presentation.html#interpreting-the-map",
+    "href": "orkut-presentation.html#interpreting-the-map",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Interpreting the Map",
+    "text": "Interpreting the Map\n\nDense areas = shared social worlds\n\nHumor, fandom, religion, affect, locality\n\nSparse areas = niche naming practices\n\n\n\n\n\n\n\nNote\n\n\nUMAP preserves local structure, not global distances.\n\n\n\n\nPoint out dense vs sparse areas.\nWarn against overinterpreting global layout."
+  },
+  {
+    "objectID": "orkut-presentation.html#caps-lock-stylometry",
+    "href": "orkut-presentation.html#caps-lock-stylometry",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Caps Lock Stylometry",
+    "text": "Caps Lock Stylometry\n\nstatic preview — deeper inspection in the Quarto report\n\nUse caps ratio as a proxy for emotional intensity or stylistic emphasis."
+  },
+  {
+    "objectID": "orkut-presentation.html#section-3",
+    "href": "orkut-presentation.html#section-3",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Caps ratio signals stylistic intensity.\n\nDistinct expressive micro-genres emerge."
+  },
+  {
+    "objectID": "orkut-presentation.html#miguxês-stylometry",
+    "href": "orkut-presentation.html#miguxês-stylometry",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Miguxês Stylometry",
+    "text": "Miguxês Stylometry\n\nstatic preview — full analysis in the Quarto report\n\nExplain Miguxês as a youth-coded register."
+  },
+  {
+    "objectID": "orkut-presentation.html#section-4",
+    "href": "orkut-presentation.html#section-4",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "k_style approximates one visible dimension of miguxês.\n\n\n\n\n\n\nNote\n\n\nHigh false-positive risk → interpret as a stylistic proxy only."
+  },
+  {
+    "objectID": "orkut-presentation.html#section-5",
+    "href": "orkut-presentation.html#section-5",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Topics form expressive families.\n\nPositive stance clusters tightly.\n\nNegative stance diffuses across syntactic forms."
+  },
+  {
+    "objectID": "orkut-presentation.html#section-6",
+    "href": "orkut-presentation.html#section-6",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "VADER used cautiously.\n\nPositive expressions follow templates.\n\nNegative expressions disperse due to negation patterns."
+  },
+  {
+    "objectID": "orkut-presentation.html#future-work",
+    "href": "orkut-presentation.html#future-work",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Future Work",
+    "text": "Future Work\n\nRicher sociolinguistic modeling\n\nGeographic identity mapping\n\nYouth registers & symbolic play\n\nSurviving forum threads\n\nMulti-feature models: style × semantics × sentiment"
+  },
+  {
+    "objectID": "orkut-presentation.html",
+    "href": "orkut-presentation.html",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "",
+    "text": "Orkut shaped early Brazilian internet culture.\n\nCommunity names were a public form of self-curation.\n\nAfter 2014, nearly all content vanished.\n\nOnly partial HTML snapshots survive."
+  },
+  {
+    "objectID": "orkut-presentation.html#example-orkut-profile",
+    "href": "orkut-presentation.html#example-orkut-profile",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Example: Orkut Profile",
+    "text": "Example: Orkut Profile\n\nOrkut profile screenshot"
+  },
+  {
+    "objectID": "orkut-presentation.html#example-archived-page",
+    "href": "orkut-presentation.html#example-archived-page",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Example: Archived Page",
+    "text": "Example: Archived Page\n\nArchived Orkut page"
+  },
+  {
+    "objectID": "orkut-presentation.html#geographic-shifts-2004-2014",
+    "href": "orkut-presentation.html#geographic-shifts-2004-2014",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Geographic Shifts (2004 → 2014)",
+    "text": "Geographic Shifts (2004 → 2014)\n\n\n\nCountry\n2004\n2014\n\n\n\n\nBrazil\n5.16%\n55.5%\n\n\nUS\n51.36%\n3.3%\n\n\nIndia\n—\n18.4%\n\n\nChina\n—\n6.4%\n\n\nJapan\n7.74%\n2.7%\n\n\n\n\nNarrate the shift from US → Brazil → Brazil+India.\nImportant cultural context for interpreting the dataset."
+  },
+  {
+    "objectID": "orkut-presentation.html#platform-timeline",
+    "href": "orkut-presentation.html#platform-timeline",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Platform Timeline",
+    "text": "Platform Timeline\n    2004\n    ───────────────────────────\n    Launch\n\n\n    2005\n    ───────────────────────────\n    Massive Brazilian adoption\n\n\n    2007\n    ───────────────────────────\n    India becomes major hub\n\n\n    2010\n    ───────────────────────────\n    Infrastructure migration\n\n\n    2012\n    ───────────────────────────\n    Feature decay\n\n\n    2014\n    ───────────────────────────\n    Shutdown\n\nShow trajectory and platform decline.\nPlace the dataset historically."
+  },
+  {
+    "objectID": "orkut-presentation.html#reconstruction-challenges",
+    "href": "orkut-presentation.html#reconstruction-challenges",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Reconstruction Challenges",
+    "text": "Reconstruction Challenges\n\nNo API\n\nBroken/partial HTML\n\nLayout varies by year\n\nMissing pagination\n\nDuplicate and inconsistent content\n\n\nSummarize scraping complexity; justify defensive parsing choices."
+  },
+  {
+    "objectID": "orkut-presentation.html#stylometric-features",
+    "href": "orkut-presentation.html#stylometric-features",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Stylometric Features",
+    "text": "Stylometric Features\n\nCharacter length:\n“eu te amo” → “eu te amooooo”\nCaps ratio: “EU TE AMO” vs. “Eu te amo”\nVowel elongation:\n“nooossa”\nPunctuation elongation: “vem!!!” / “oi????”\nSymbol density: “♥ eu te amo ♥”\nMiguxês (k_style): “aki, keru, naum”\n\n\nKeep examples intuitive.\nEmphasize expressive registers and internet-era writing styles."
+  },
+  {
+    "objectID": "orkut-presentation.html#semantic-features",
+    "href": "orkut-presentation.html#semantic-features",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Semantic Features",
+    "text": "Semantic Features\n\nMultilingual embeddings (SentenceTransformers)\n\nUMAP projection\n\nKMeans / HDBSCAN / BERTopic clustering\n\n\nExplain pipeline: embeddings capture meaning, UMAP shows structure, clustering identifies thematic groups."
+  },
+  {
+    "objectID": "orkut-presentation.html#caps-lock-interpretation",
+    "href": "orkut-presentation.html#caps-lock-interpretation",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Caps Lock Interpretation",
+    "text": "Caps Lock Interpretation\n\nCaps ratio ≈ stylistic intensity\n\nClusters reveal expressive micro-genres\n\n\nInterpret clusters as stylistic tendencies, not demographic traits."
+  },
+  {
+    "objectID": "orkut-presentation.html#miguxês-interpretation",
+    "href": "orkut-presentation.html#miguxês-interpretation",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Miguxês Interpretation",
+    "text": "Miguxês Interpretation\n\nk_style captures one visible dimension of youth register\n\nShould be read as a proxy, not a classifier\n\n\nClarify it’s descriptive, not stereotyping."
+  },
+  {
+    "objectID": "orkut-presentation.html#bertopic-micro-topic-barcharts",
+    "href": "orkut-presentation.html#bertopic-micro-topic-barcharts",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "BERTopic: Micro-topic Barcharts",
+    "text": "BERTopic: Micro-topic Barcharts\n\nstatic preview — interactive version in the Quarto report\n\nHighlight intuitive topics: affection, fandom, jokes, identity."
+  },
+  {
+    "objectID": "orkut-presentation.html#bertopic-intertopic-distance-map",
+    "href": "orkut-presentation.html#bertopic-intertopic-distance-map",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "BERTopic: Intertopic Distance Map",
+    "text": "BERTopic: Intertopic Distance Map\n\nstatic preview — interactive exploration in the Quarto report\n\nInterpret topic families and proximity."
+  },
+  {
+    "objectID": "orkut-presentation.html#interpretation",
+    "href": "orkut-presentation.html#interpretation",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Interpretation",
+    "text": "Interpretation\n\nTopics form expressive families\n\nAffect, fandom, kinship, humor\n\nNegative stance diffuses; positive stance clusters\n\n\nSummarize the thematic shape of the data."
+  },
+  {
+    "objectID": "orkut-presentation.html#sentiment-interpretation",
+    "href": "orkut-presentation.html#sentiment-interpretation",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Sentiment Interpretation",
+    "text": "Sentiment Interpretation\n\nPortuguese positive expressions are formulaic → cluster tightly\n\nNegative expressions vary syntactically → disperse\n\nVADER used cautiously (English model)\n\n\nAcknowledge limitations but highlight patterns."
+  },
+  {
+    "objectID": "orkut-presentation.html#conclusion",
+    "href": "orkut-presentation.html#conclusion",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nOrkut preserves a unique moment in online identity-making.\n\nCommunities were a lightweight identity system.\n\nExpressive registers include humor, affect, locality, fandom, youth styles.\n\nComputational methods reconstruct lost cultural landscapes.\n\n\nEnd with cultural significance + methodological contribution."
+  },
+  {
+    "objectID": "orkut-presentation.html#references",
+    "href": "orkut-presentation.html#references",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "References",
+    "text": "References\nFor full list, check accompanying report orkut_analysis.qmd.\n\nKeep this simple; move on."
+  },
+  {
+    "objectID": "orkut-presentation.html#acknowledgments",
+    "href": "orkut-presentation.html#acknowledgments",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThanks to PyData Global 2025 organizers for the opportunity to present this work!\n\nInternet Archive - Wayback Machine\nOpen-source Python ecosystem\nData science and sociotechnical research communities\n\nAnd most importantly, thank you for listening to my presentation!\n\nGive gratitude and close warmly."
+  },
+  {
+    "objectID": "orkut-presentation.html#contact",
+    "href": "orkut-presentation.html#contact",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Contact",
+    "text": "Contact\nFor questions or collaboration:\nRodrigo Silva Ferreira\nEmail: rodrigosf672@gmail.com GitHub: /rodrigosf672\nLinkedIn: /rsf309\nData science and open source for a better world!\n\nInvite follow-up; mention interest in sociotechnical and archival projects."
+  },
+  {
+    "objectID": "orkut-presentation.html#about-me",
+    "href": "orkut-presentation.html#about-me",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "About Me",
+    "text": "About Me\n\n\nQuick intro: chemistry → software → sociotechnical research.\nFrame why Orkut matters personally and culturally."
+  },
+  {
+    "objectID": "orkut-presentation.html#have-you-heard-or-orkut",
+    "href": "orkut-presentation.html#have-you-heard-or-orkut",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Have you heard or Orkut?",
+    "text": "Have you heard or Orkut?"
+  },
+  {
+    "objectID": "orkut-presentation.html#a",
+    "href": "orkut-presentation.html#a",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "A",
+    "text": "A"
+  },
+  {
+    "objectID": "orkut-presentation.html#have-you-heard-of-orkut",
+    "href": "orkut-presentation.html#have-you-heard-of-orkut",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Have you heard of Orkut?",
+    "text": "Have you heard of Orkut?\n\nFollow along…\nwww.github.com/rodrigosf672/orkut-pydataglobal2025\n\nGauge audience familiarity.\nMention that Orkut shaped Brazilian online culture long before Facebook."
+  },
+  {
+    "objectID": "orkut-presentation.html#orkut-profile-example",
+    "href": "orkut-presentation.html#orkut-profile-example",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Orkut Profile Example",
+    "text": "Orkut Profile Example\n\n\nShow the aesthetic and UX.\nPoint out public-facing identity signals through communities."
+  },
+  {
+    "objectID": "orkut-presentation.html#orkut-archive-in-the-wayback-machine",
+    "href": "orkut-presentation.html#orkut-archive-in-the-wayback-machine",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Orkut Archive in the Wayback Machine",
+    "text": "Orkut Archive in the Wayback Machine\n\n\nHighlight how inconsistent and incomplete the archive is.\nMotivates reconstruction work."
+  },
+  {
+    "objectID": "orkut-presentation.html#orkut-archive-in-the-wayback-machine-1",
+    "href": "orkut-presentation.html#orkut-archive-in-the-wayback-machine-1",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Orkut Archive in the Wayback Machine",
+    "text": "Orkut Archive in the Wayback Machine"
+  },
+  {
+    "objectID": "orkut-presentation.html#beautifulsoup",
+    "href": "orkut-presentation.html#beautifulsoup",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "BeautifulSoup",
+    "text": "BeautifulSoup"
+  },
+  {
+    "objectID": "orkut-presentation.html#a-more-realistic-profile",
+    "href": "orkut-presentation.html#a-more-realistic-profile",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "A More Realistic Profile",
+    "text": "A More Realistic Profile\n\n\nThank my friend for getting that screenshot!"
+  },
+  {
+    "objectID": "orkut-presentation.html#a-more-recent-profile-example",
+    "href": "orkut-presentation.html#a-more-recent-profile-example",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "A More Recent Profile Example",
+    "text": "A More Recent Profile Example\n\n\nThank my friend for getting that screenshot!"
+  },
+  {
+    "objectID": "orkut-presentation.html#enshittification",
+    "href": "orkut-presentation.html#enshittification",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Enshittification",
+    "text": "Enshittification\n    ┌────────────────────┐\n    │ 1. User Benefit    │\n    │--------------------│\n    │ Generous features  │\n    │ Little friction    │\n    │ Goal: attract users│\n    └─────────▲──────────┘\n              │\n              │ platform gains users\n              ▼\n    ┌────────────────────┐\n    │ 2. Business Benefit│\n    │--------------------│\n    │ More ads, partners │\n    │ Data extraction    │\n    │ Goal: monetize     │\n    └─────────▲──────────┘\n              │\n              │ platform extracts value\n              ▼\n    ┌────────────────────┐\n    │ 3. Platform Benefit│\n    │--------------------│\n    │ Hostile UX         │\n    │ Feature decay      │\n    │ Goal: maximize rent│\n    └─────────▲──────────┘\n              │\n              │ ecosystem collapses\n              ▼\n      (users + creators leave)\n\nSituate Orkut’s decline within Doctorow’s broader analysis of platform incentives.\nEmphasize that this pattern is structural: growth → extraction → collapse.\nUse this as a bridge to why so much cultural material vanished and why reconstruction matters."
+  },
+  {
+    "objectID": "orkut-presentation.html#semantic-features-1",
+    "href": "orkut-presentation.html#semantic-features-1",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Semantic Features",
+    "text": "Semantic Features\n\nMultilingual embeddings (SentenceTransformers)\n\nUMAP projection\n\nKMeans / HDBSCAN / BERTopic clustering\n\n\nExplain pipeline: embeddings capture meaning, UMAP shows structure, clustering identifies thematic groups."
+  },
+  {
+    "objectID": "orkut-presentation.html#preview-of-analyses",
+    "href": "orkut-presentation.html#preview-of-analyses",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Preview of Analyses",
+    "text": "Preview of Analyses\nIn the interactive Quarto report, I’ll walk through:\n\nLanguage distribution\n\nSemantic space (UMAP)\n\nStylometry (caps-lock, Miguxês)\n\nTopic modeling with BERTopic\n\nSentiment structure\n\nThese plots reveal structure, style, and expressive patterns across community names.\n\nSet expectations: slides show static previews; real exploration happens in the QMD report."
+  },
+  {
+    "objectID": "orkut-presentation.html#recap-of-analytical-findings",
+    "href": "orkut-presentation.html#recap-of-analytical-findings",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Recap of Analytical Findings",
+    "text": "Recap of Analytical Findings\n\nLanguages reflect Orkut’s cultural geography\n\nSemantic space shows clusters of humor, affect, fandom, locality\n\nStylometry captures expressive registers\n\nBERTopic reveals micro-topics\n\nSentiment patterns shaped by formulaic vs. varied expressions\n\nFull interactive walkthrough is available in the Quarto report (orkut_analysis.qmd).\n\nHigh-level summary before moving to implications."
+  },
+  {
+    "objectID": "orkut-presentation.html#if-you-want-to-explore-the-data-and-code-yourself",
+    "href": "orkut-presentation.html#if-you-want-to-explore-the-data-and-code-yourself",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "If you want to explore the data and code yourself",
+    "text": "If you want to explore the data and code yourself\nGitHub repo to follow along:\nwww.github.com/rodrigosf672/orkut-pydataglobal2025"
+  },
+  {
+    "objectID": "orkut-presentation.html#enshittification-cycle-cory-doctorow",
+    "href": "orkut-presentation.html#enshittification-cycle-cory-doctorow",
+    "title": "Text Mining Orkut’s Community Data with Python",
+    "section": "Enshittification Cycle (Cory Doctorow)",
+    "text": "Enshittification Cycle (Cory Doctorow)\n    ┌────────────────────┐\n    │ 1. User Benefit    │\n    │--------------------│\n    │ Generous features  │\n    │ Little friction    │\n    │ Goal: attract users│\n    └─────────▲──────────┘\n              │\n              │ platform gains users\n              ▼\n    ┌────────────────────┐\n    │ 2. Business Benefit│\n    │--------------------│\n    │ More ads, partners │\n    │ Data extraction    │\n    │ Goal: monetize     │\n    └─────────▲──────────┘\n              │\n              │ platform extracts value\n              ▼\n    ┌────────────────────┐\n    │ 3. Platform Benefit│\n    │--------------------│\n    │ Hostile UX         │\n    │ Feature decay      │\n    │ Goal: maximize rent│\n    └─────────▲──────────┘\n              │\n              │ ecosystem collapses\n              ▼\n      (users + creators leave)\n\nSituate Orkut’s decline within Doctorow’s broader analysis of platform incentives.\nEmphasize that this pattern is structural: growth → extraction → collapse.\nUse this as a bridge to why so much cultural material vanished and why reconstruction matters."
+  }
+]

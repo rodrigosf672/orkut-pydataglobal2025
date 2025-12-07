@@ -1,0 +1,42 @@
+# Quarto build artifacts
+/_site/
+/_freeze/
+/.quarto/
+
+/.quarto/ # sometimes generated inside project
+
+# Jupyter + Quarto notebooks cache
+/.jupyter_cache/
+/.renv/
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python packaging leftovers
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Logs
+*.log
+
+# Rendered or temporary outputs from notebooks/reports
+orkut_analysis_files/
+
+# VSCode settings if not intended for repo
+.vscode/
+
+# Temporary checkpoints
+.ipynb_checkpoints/

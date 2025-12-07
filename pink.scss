@@ -1,0 +1,102 @@
+/*-- scss:defaults --*/
+$body-bg: #eaf5ff;
+$body-color: #3f3f3fff;
+$link-color: #ff60aaff;
+$code-bg: #ffe2fbff;
+$heading-color: #ff60aaff;
+$font-family-sans-serif: "Inter", "Poppins", "Raleway", sans-serif;
+
+/*-- scss:rules --*/
+.reveal {
+  background: $body-bg;
+}
+
+.reveal section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2.5em 3em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  width: 88vw;
+  max-width: 1050px;
+  margin: 0 auto !important;
+  border: 2px solid #ff84d8ff; /* pink border for all slides */
+}
+
+h1, h2, h3 {
+  font-weight: 650;
+  color: $heading-color;
+  letter-spacing: 0.3px;
+  text-shadow: none;
+}
+
+p, li {
+  color: $body-color;
+  font-size: 1.05em;
+  line-height: 1.45;
+}
+
+ul li::marker {
+  content: "• ";
+  color: $heading-color;
+  font-weight: 600;
+}
+
+.reveal footer {
+  font-size: 0.75em;
+  color: #555;
+}
+
+.orkut-logo,
+.tagline {
+  display: none !important;
+}
+
+.reveal .slides {
+  max-width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.reveal h1 {
+  font-size: 1.55em !important;
+}
+
+.reveal h2 {
+  font-size: 0.85em !important;
+  font-weight: 500;
+  color: #444;
+}
+
+section.fullbleed {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Title slide */
+.reveal .slides section:first-of-type {
+  text-align: center;
+  padding-top: 4em !important;
+  padding-bottom: 3em !important;
+  border: 2px solid #ff84d8ff;
+  border-radius: 18px;
+}
+
+.reveal .slides section:first-of-type h1 {
+  font-size: 2em !important;
+  margin-bottom: 0.25em;
+  color: #383637ff !important;
+}
+
+.reveal .slides section:first-of-type h2 {
+  font-size: 1.1em !important;
+  font-weight: 400;
+  margin-top: 0.2em;
+  color: #cc4f8d !important;
+}
+
+.reveal .slides section:first-of-type .quarto-title-author,
+.reveal .slides section:first-of-type .quarto-title-date {
+  color: #444 !important;
+}

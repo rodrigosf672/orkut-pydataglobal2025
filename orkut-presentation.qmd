@@ -1,0 +1,527 @@
+---
+title: "Text Mining Orkut’s Community Data with Python"
+subtitle: "Cultural Memory, Platform Neglect, and Digital Amnesia"
+author: "Rodrigo Silva Ferreira"
+date: "2025-12-09"
+format:
+  revealjs:
+    theme: [pink.scss]
+    transition: fade
+    slide-number: true
+    footer: "PyData Global 2025"
+    incremental: false
+---
+
+## About Me {.fullbleed}
+
+![](rodrigo-about_me.jpg)
+
+::: notes
+Quick intro: chemistry → software → sociotechnical research.  
+Frame why Orkut matters personally and culturally.
+:::
+
+
+## Have you heard of Orkut?
+
+![](orkut-logo.png)
+
+### Follow along...
+
+www.github.com/rodrigosf672/orkut-pydataglobal2025
+
+::: notes
+Gauge audience familiarity.  
+Mention that Orkut shaped Brazilian online culture long before Facebook.
+:::
+
+---
+
+## Introduction
+
+- Orkut shaped early Brazilian internet culture.  
+- Community names were a public form of self-curation.  
+- After 2014, almost all platform data disappeared.  
+- Only partial HTML snapshots survive.
+
+::: notes
+Set up the problem: cultural loss + fragmented archives + why reconstruction is valuable.
+:::
+
+---
+
+## Orkut Profile Example {.fullbleed}
+![](orkut-profile1.jpg)
+
+::: notes
+Show the aesthetic and UX.  
+Point out public-facing identity signals through communities.
+:::
+
+---
+
+## A More Recent Profile Example {.fullbleed}
+![](orkut-profile2.jpeg)
+
+::: notes
+Thank my friend for getting that screenshot!
+:::
+
+---
+
+## Why Orkut Matters
+
+- Communities worked as a vocabulary of identity.  
+- No algorithmic feeds: users curated themselves.  
+- Names acted as expressive micro-texts.
+
+::: notes
+Explain how community titles functioned like early status updates, humor, belonging cues.
+:::
+
+---
+
+## Geographic Shifts (2004 → 2014)
+
+| Country | 2004 | 2014 |
+|--------|------|------|
+| Brazil | 5.16% | 55.5% |
+| US     | 51.36% | 3.3% |
+| India  | — | 18.4% |
+| China  | — | 6.4% |
+| Japan  | 7.74% | 2.7% |
+
+::: notes
+Narrate the shift from US → Brazil → Brazil+India.  
+Important cultural context for interpreting the dataset.
+:::
+
+---
+
+##  
+::: {.callout-note}
+Orkut shifted from US-centric → Brazil + India + Global South
+:::
+
+::: notes
+Reinforce the shift and why it matters for multilingual modeling.
+:::
+
+---
+
+## Platform Timeline
+
+        2004
+        ───────────────────────────
+        Launch
+
+
+        2005
+        ───────────────────────────
+        Massive Brazilian adoption
+
+
+        2007
+        ───────────────────────────
+        India becomes major hub
+
+
+        2010
+        ───────────────────────────
+        Infrastructure migration
+
+
+        2012
+        ───────────────────────────
+        Feature decay
+
+
+        2014
+        ───────────────────────────
+        Shutdown
+
+
+::: notes
+Show trajectory and platform decline.  
+Place the dataset historically.
+:::
+
+---
+
+## Enshittification Cycle (Cory Doctorow)
+
+        ┌────────────────────┐
+        │ 1. User Benefit    │
+        │--------------------│
+        │ Generous features  │
+        │ Little friction    │
+        │ Goal: attract users│
+        └─────────▲──────────┘
+                  │
+                  │ platform gains users
+                  ▼
+        ┌────────────────────┐
+        │ 2. Business Benefit│
+        │--------------------│
+        │ More ads, partners │
+        │ Data extraction    │
+        │ Goal: monetize     │
+        └─────────▲──────────┘
+                  │
+                  │ platform extracts value
+                  ▼
+        ┌────────────────────┐
+        │ 3. Platform Benefit│
+        │--------------------│
+        │ Hostile UX         │
+        │ Feature decay      │
+        │ Goal: maximize rent│
+        └─────────▲──────────┘
+                  │
+                  │ ecosystem collapses
+                  ▼
+          (users + creators leave)
+
+
+
+::: notes
+Situate Orkut’s decline within Doctorow’s broader analysis of platform incentives.  
+Emphasize that this pattern is structural: growth → extraction → collapse.  
+Use this as a bridge to why so much cultural material vanished and why reconstruction matters.
+:::
+
+---
+
+## Platform Decline
+
+- 51M+ communities lost.  
+- Almost all cultural material erased.  
+- Remaining content = inconsistent web snapshots.
+
+::: notes
+Emphasize digital amnesia and importance of recovery.
+:::
+
+---
+
+## Orkut Archive in the Wayback Machine {.fullbleed}
+![](orkut-wayback.png)
+
+::: notes
+Highlight how inconsistent and incomplete the archive is.  
+Motivates reconstruction work.
+:::
+
+---
+
+## What Survives
+
+- 124,988 recoverable community names.  
+- Variation across language, style, humor, identity cues.  
+- Each title = a micro-text of early social networking.
+
+::: {.callout-important}
+Clusters represent linguistic similarity; not user groups.
+:::
+
+::: notes
+Clarify what the dataset actually is and isn’t.  
+Prevent misinterpretation: this is linguistic, not social network analysis.
+:::
+
+---
+
+## Reconstruction Challenges
+
+- No API  
+- Broken/partial HTML  
+- Layout varies by year  
+- Missing pagination  
+- Duplicate and inconsistent content
+
+::: notes
+Summarize scraping complexity; justify defensive parsing choices.
+:::
+
+---
+
+## Reconstruction Approach
+
+- Multiple CSS fallbacks  
+- Defensive parsing  
+- Deduplication  
+- Noise filtering  
+- Stored as CSV for reproducibility
+
+::: notes
+Reassure reproducibility.  
+Highlight careful engineering despite messy source data.
+:::
+
+---
+
+## Linguistic Foundations
+
+- Community names encode stance, identity, humor, belonging.  
+- They form a unique record of early internet culture.  
+- Analysis combines stylometry and semantics.
+
+::: notes
+Explain why stylometry + semantics complement each other.
+:::
+
+---
+
+## Stylometric Features
+
+- Character length:  
+  "eu te amo" → "eu te amooooo"
+
+- Caps ratio:
+  "EU TE AMO" vs. "Eu te amo"
+
+- Vowel elongation:  
+  "nooossa"
+
+- Punctuation elongation:
+  "vem!!!" / "oi????"
+
+- Symbol density: 
+  "♥ eu te amo ♥"
+
+- Miguxês (k_style):
+  "aki, keru, naum"
+
+::: notes
+Keep examples intuitive.  
+Emphasize expressive registers and internet-era writing styles.
+:::
+
+---
+
+## Semantic Features
+
+- Multilingual embeddings (SentenceTransformers)  
+- UMAP projection  
+- KMeans / HDBSCAN / BERTopic clustering
+
+::: notes
+Explain pipeline: embeddings capture meaning, UMAP shows structure, clustering identifies thematic groups.
+:::
+
+---
+
+## Semantic Features
+
+- Multilingual embeddings (SentenceTransformers)  
+- UMAP projection  
+- KMeans / HDBSCAN / BERTopic clustering
+
+::: notes
+Explain pipeline: embeddings capture meaning, UMAP shows structure, clustering identifies thematic groups.
+:::
+
+---
+
+## Preview of Analyses
+
+In the interactive Quarto report, I’ll walk through:
+
+- Language distribution  
+- Semantic space (UMAP)  
+- Stylometry (caps-lock, Miguxês)  
+- Topic modeling with BERTopic  
+- Sentiment structure  
+
+These plots reveal structure, style, and expressive patterns across community names.
+
+::: notes
+Set expectations: slides show static previews; real exploration happens in the QMD report.
+:::
+
+---
+
+## Language Distribution {.fullbleed}
+![](plot1.png)
+
+_static preview — interactive version shown in the Quarto report_
+
+::: notes
+Mention mix of Portuguese, English, Spanish, and smaller languages.
+:::
+
+---
+
+## Semantic Map (UMAP) {.fullbleed}
+![](plot2.png)
+
+_static preview — interactive exploration in the Quarto report_
+
+::: notes
+Axes aren’t interpretable; emphasis is local neighborhoods.
+:::
+
+---
+
+## Caps Lock Stylometry {.fullbleed}
+![](plot3.png)
+
+_static preview — deeper inspection in the Quarto report_
+
+::: notes
+Use caps ratio as a proxy for emotional intensity or stylistic emphasis.
+:::
+
+---
+
+## Miguxês Stylometry {.fullbleed}
+![](plot4.png)
+
+_static preview — full analysis in the Quarto report_
+
+::: notes
+Explain Miguxês as a youth-coded register.
+:::
+
+---
+
+## BERTopic: Micro-topic Barcharts {.fullbleed}
+![](plot5.png)
+
+_static preview — interactive version in the Quarto report_
+
+::: notes
+Highlight intuitive topics: affection, fandom, jokes, identity.
+:::
+
+---
+
+## BERTopic: Intertopic Distance Map {.fullbleed}
+![](plot6.png)
+
+_static preview — interactive exploration in the Quarto report_
+
+::: notes
+Interpret topic families and proximity.
+:::
+
+---
+
+## Sentiment Mapping {.fullbleed}
+![](plot10.png)
+
+_static preview — interactive version in the Quarto report_
+
+::: notes
+Explain VADER limitations for Portuguese.
+:::
+
+---
+
+## Sentiment Interpretation
+
+- Portuguese positive expressions are formulaic → cluster tightly  
+- Negative expressions vary syntactically → disperse  
+- VADER used cautiously (English model)
+
+::: notes
+Acknowledge limitations but highlight patterns.
+:::
+
+---
+
+## Recap of Analytical Findings
+
+- Languages reflect Orkut’s cultural geography  
+- Semantic space shows clusters of humor, affect, fandom, locality  
+- Stylometry captures expressive registers  
+- BERTopic reveals micro-topics  
+- Sentiment patterns shaped by formulaic vs. varied expressions  
+
+Full interactive walkthrough is available in the Quarto report (`orkut_analysis.qmd`).
+
+::: notes
+High-level summary before moving to implications.
+:::
+
+---
+
+## Conclusion
+
+- Orkut preserves a unique moment in online identity-making.  
+- Communities were a lightweight identity system.  
+- Expressive registers include humor, affect, locality, fandom, youth styles.  
+- Computational methods reconstruct lost cultural landscapes.
+
+::: notes
+End with cultural significance + methodological contribution.
+:::
+
+---
+
+## Why This Matters
+
+- Platforms vanish; cultural memory disappears.  
+- Surviving fragments still hold sociological value.  
+- Orkut shows intentional, user-driven identity: no algorithmic mediation.
+
+::: notes
+Connect to broader debates on digital memory and platform governance.
+:::
+
+---
+
+## Future Directions
+
+- Richer sociolinguistic modeling  
+- Geographic identity signals  
+- Register mapping across semantic space  
+- Archival forum thread analysis  
+- Multi-feature alignment (semantics × style × sentiment)
+
+::: notes
+Encourage collaboration; mention potential for community-based archival projects.
+:::
+
+---
+
+## References
+For full list, check accompanying report `orkut_analysis.qmd`.
+
+::: notes
+Keep this simple; move on.
+:::
+
+---
+
+## Acknowledgments
+
+Thanks to PyData Global 2025 organizers for the opportunity to present this work!
+
+
+* Internet Archive - Wayback Machine
+* Open-source Python ecosystem
+* Data science and sociotechnical research communities
+
+And most importantly, thank you for listening to my presentation!
+
+::: notes
+Give gratitude and close warmly.
+:::
+
+---
+
+## Contact
+
+For questions or collaboration:
+
+**Rodrigo Silva Ferreira**  
+Email: `rodrigosf672@gmail.com`
+GitHub: `/rodrigosf672`  
+LinkedIn: `/rsf309`
+
+Data science and open source for a better world!
+
+::: notes
+Invite follow-up; mention interest in sociotechnical and archival projects.
+:::

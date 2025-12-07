@@ -1,0 +1,11 @@
+project:
+  type: website   # or "default" if you’re not building a website
+
+format:
+  revealjs:
+    theme: [pink.scss]
+    transition: fade
+    slide-number: true
+    footer: "PyData Global 2025"
+    center: true
+    incremental: true
