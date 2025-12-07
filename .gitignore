@@ -34,9 +34,12 @@ pip-wheel-metadata/
 
 # Rendered or temporary outputs from notebooks/reports
 orkut_analysis_files/
+README_files/
+README.html
 
 # VSCode settings if not intended for repo
 .vscode/
 
 # Temporary checkpoints
 .ipynb_checkpoints/
+
