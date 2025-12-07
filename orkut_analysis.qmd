@@ -21,7 +21,7 @@ execute:
 
 # 1. Introduction: Why Orkut Matters
 
-![Example of an Orkut profile (© Google/Orkut)](orkut-profile1.jpg)
+![Example of an Orkut profile (© Google/Orkut)](images/orkut-profile1.jpg)
 
 ## 1.1 Orkut as Cultural Infrastructure
 

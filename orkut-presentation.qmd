@@ -14,7 +14,7 @@ format:
 
 ## About Me {.fullbleed}
 
-![](rodrigo-about_me.jpg)
+![](images/rodrigo-about_me.jpg)
 
 ::: notes
 Quick intro: chemistry → software → sociotechnical research.  
@@ -24,7 +24,7 @@ Frame why Orkut matters personally and culturally.
 
 ## Have you heard of Orkut?
 
-![](orkut-logo.png)
+![](images/orkut-logo.png)
 
 ### Follow along...
 
@@ -51,7 +51,7 @@ Set up the problem: cultural loss + fragmented archives + why reconstruction is 
 ---
 
 ## Orkut Profile Example {.fullbleed}
-![](orkut-profile1.jpg)
+![](images/orkut-profile1.jpg)
 
 ::: notes
 Show the aesthetic and UX.  
@@ -61,7 +61,7 @@ Point out public-facing identity signals through communities.
 ---
 
 ## A More Recent Profile Example {.fullbleed}
-![](orkut-profile2.jpeg)
+![](images/orkut-profile2.jpeg)
 
 ::: notes
 Thank my friend for getting that screenshot!
@@ -205,7 +205,7 @@ Emphasize digital amnesia and importance of recovery.
 ---
 
 ## Orkut Archive in the Wayback Machine {.fullbleed}
-![](orkut-wayback.png)
+![](images/orkut-wayback.png)
 
 ::: notes
 Highlight how inconsistent and incomplete the archive is.  
@@ -342,7 +342,7 @@ Set expectations: slides show static previews; real exploration happens in the Q
 ---
 
 ## Language Distribution {.fullbleed}
-![](plot1.png)
+![](images/plot1.png)
 
 _static preview — interactive version shown in the Quarto report_
 
@@ -353,7 +353,7 @@ Mention mix of Portuguese, English, Spanish, and smaller languages.
 ---
 
 ## Semantic Map (UMAP) {.fullbleed}
-![](plot2.png)
+![](images/plot2.png)
 
 _static preview — interactive exploration in the Quarto report_
 
@@ -364,7 +364,7 @@ Axes aren’t interpretable; emphasis is local neighborhoods.
 ---
 
 ## Caps Lock Stylometry {.fullbleed}
-![](plot3.png)
+![](images/plot3.png)
 
 _static preview — deeper inspection in the Quarto report_
 
@@ -375,7 +375,7 @@ Use caps ratio as a proxy for emotional intensity or stylistic emphasis.
 ---
 
 ## Miguxês Stylometry {.fullbleed}
-![](plot4.png)
+![](images/plot4.png)
 
 _static preview — full analysis in the Quarto report_
 
@@ -386,7 +386,7 @@ Explain Miguxês as a youth-coded register.
 ---
 
 ## BERTopic: Micro-topic Barcharts {.fullbleed}
-![](plot5.png)
+![](images/plot5.png)
 
 _static preview — interactive version in the Quarto report_
 
@@ -397,7 +397,7 @@ Highlight intuitive topics: affection, fandom, jokes, identity.
 ---
 
 ## BERTopic: Intertopic Distance Map {.fullbleed}
-![](plot6.png)
+![](images/plot6.png)
 
 _static preview — interactive exploration in the Quarto report_
 
@@ -408,7 +408,7 @@ Interpret topic families and proximity.
 ---
 
 ## Sentiment Mapping {.fullbleed}
-![](plot10.png)
+![](images/plot10.png)
 
 _static preview — interactive version in the Quarto report_
 
