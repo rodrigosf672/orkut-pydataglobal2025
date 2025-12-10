@@ -52,7 +52,7 @@ Orkut’s geographic center shifted dramatically over its lifespan. Originally d
 | United Kingdom | 3.72%                     | —                         |
 | Other          | 27.92%                    | 15.7%                     |
 
-*Source: Wayback Machine capture of Alexa data · https://web.archive.org/web/20140109153358/http://www.alexa.com/siteinfo/orkut.com.br*
+*Source: Wayback Machine capture of Alexa data* · <https://web.archive.org/web/20140109153358/http://www.alexa.com/siteinfo/orkut.com.br>
 
 ::: {.callout-note}
 ### Geographic Shifts
@@ -849,25 +849,25 @@ These directions invite data scientists and sociologists to treat Orkut’s remn
 
 # 12. References
 
-- Conneau, A., Khandelwal, K., Goyal, N., et al. (2020). *Unsupervised Cross-lingual Representation Learning at Scale (XLM-R).* Proceedings of ACL 2020. https://doi.org/10.18653/v1/2020.acl-main.747
+- Conneau, A., Khandelwal, K., Goyal, N., et al. (2020). *Unsupervised Cross-lingual Representation Learning at Scale (XLM-R).* Proceedings of ACL 2020. <https://doi.org/10.18653/v1/2020.acl-main.747>
 
-- Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.* Proceedings of NAACL 2019. https://doi.org/10.18653/v1/N19-1423
+- Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.* Proceedings of NAACL 2019. <https://doi.org/10.18653/v1/N19-1423>
 
-- Doctorow, C. (2025). *PyCon US 2025 Keynote.* https://www.youtube.com/watch?v=ydVmzg_SJLw
+- Doctorow, C. (2025). *PyCon US 2025 Keynote.* <https://www.youtube.com/watch?v=ydVmzg_SJLw>
 
-- Grootendorst, M. (2022). *BERTopic: Neural Topic Modeling with Class-Based TF-IDF.* https://doi.org/10.48550/arXiv.2203.05794
+- Grootendorst, M. (2022). *BERTopic: Neural Topic Modeling with Class-Based TF-IDF.* <https://doi.org/10.48550/arXiv.2203.05794>
 
-- Hutto, C., & Gilbert, E. (2014). *VADER: A Parsimonious Rule-Based Model for Sentiment Analysis of Social Media Text.* Proceedings of ICWSM 2014. https://doi.org/10.1609/icwsm.v8i1.14550
+- Hutto, C., & Gilbert, E. (2014). *VADER: A Parsimonious Rule-Based Model for Sentiment Analysis of Social Media Text.* Proceedings of ICWSM 2014. <https://doi.org/10.1609/icwsm.v8i1.14550>
 
-- Orkut Community Archive. *Wayback Machine.* https://web.archive.org/web/20141001005309/http://orkut.google.com/ 
+- Orkut Community Archive. *Wayback Machine.* <https://web.archive.org/web/20141001005309/http://orkut.google.com/> 
 
-- McInnes, L., Healy, J., & Astels, S. (2017). *hdbscan: Hierarchical density based clustering.* Journal of Open Source Software, 2(11), 205. https://doi.org/10.21105/joss.00205
+- McInnes, L., Healy, J., & Astels, S. (2017). *hdbscan: Hierarchical density based clustering.* Journal of Open Source Software, 2(11), 205. <https://doi.org/10.21105/joss.00205>
 
-- McInnes, L., Healy, J., & Melville, J. (2018). *UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction.* https://doi.org/10.48550/arXiv.1802.03426
+- McInnes, L., Healy, J., & Melville, J. (2018). *UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction.* <https://doi.org/10.48550/arXiv.1802.03426>
 
-- Reimers, N., & Gurevych, I. (2019). *Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks.* https://doi.org/10.48550/arXiv.1908.10084
+- Reimers, N., & Gurevych, I. (2019). *Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks.* <https://doi.org/10.48550/arXiv.1908.10084>
 
-- Silge, J. (2017). *Training, evaluating, and interpreting topic models* https://juliasilge.com/blog/evaluating-stm/
+- Silge, J. (2017). *Training, evaluating, and interpreting topic models.* <https://juliasilge.com/blog/evaluating-stm/>
 
 ---
 

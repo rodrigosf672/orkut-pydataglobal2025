@@ -43,3 +43,5 @@ README.html
 # Temporary checkpoints
 .ipynb_checkpoints/
 
+# Posit publishing files
+.posit/publish
